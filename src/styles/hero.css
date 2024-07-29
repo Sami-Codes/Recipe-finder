@@ -1,0 +1,97 @@
+/* Start Hero */
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+}
+main.hero {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+.blob {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	z-index: -1000000;
+}
+.blob img {
+	width: 1800px;
+}
+
+main.hero .content {
+	display: flex;
+	padding: 120px 80px 25px;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	max-width: 1200px;
+	justify-content: center;
+}
+main.hero .content .text {
+	width: 50%;
+	padding: 30px 0 0 0;
+}
+main.hero .content .text h1 {
+	margin: 0;
+	text-transform: capitalize;
+}
+main.hero .content .text p.description {
+	color: var(--light-gray);
+	line-height: 1.5;
+	max-width: 600px;
+	margin: 30px 0 0 0;
+}
+main.hero .content .text a.sign-up {
+	display: inline-block;
+	margin: 20px 0;
+	font-size: 18px;
+	padding: 15px 60px;
+	transition: 0.3s;
+	border-radius: 9px;
+}
+main.hero .content .text a.sign-up:hover {
+	background-color: var(--brown);
+}
+main.hero .content .text .login a {
+	text-decoration: none;
+	margin-left: 5px;
+}
+main.hero .content .image {
+	width: 50%;
+}
+main.hero .content .image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 991px) {
+	main.hero .content {
+		padding: 0;
+	}
+	main.hero .content .text {
+		text-align: center;
+		width: 80%;
+		padding: 10px 40px 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	main.hero .content .image {
+		display: none;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (max-width: 767px) {
+	main.hero .content .text {
+		width: 100%;
+	}
+}
+
+/* End Hero */

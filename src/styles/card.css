@@ -1,0 +1,48 @@
+.card-link {
+	text-decoration: none;
+	color: unset;
+}
+
+.card {
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	border-radius: 8px;
+	border: 2px solid var(--off-white);
+	margin: 0;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	max-width: 400px;
+}
+.card .top {
+	position: relative;
+}
+.card .top .image {
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card .top .image img {
+	width: 100%;
+	object-fit: cover;
+}
+.card .info {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 15px 20px;
+	gap: 16px;
+	text-transform: capitalize;
+}
+.card .info .name {
+	margin: 0;
+	color: var(--lighter-brown);
+}
+.card .info a.see-more {
+	text-decoration: none;
+	border-bottom: 1px solid var(--light-brown);
+}
+.card .info p {
+	margin: 0;
+}

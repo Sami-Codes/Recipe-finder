@@ -1,0 +1,210 @@
+/* Start Header */
+body:has(header.home) {
+	overflow: hidden !important;
+}
+header {
+	display: flex;
+	padding: 30px;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+header .logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header > a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: black;
+	gap: 10px;
+}
+header .logo img {
+	width: 30px;
+}
+header .logo h2 {
+	text-decoration: none;
+}
+
+header .logo h2 span.special {
+	color: var(--light-brown);
+}
+header nav.nav ul {
+	display: flex;
+	list-style: none;
+	gap: 10px;
+}
+header nav.nav ul li a {
+	transition: 0.3s;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+header nav.nav ul li a:hover {
+	color: var(--brown);
+}
+header .account {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+header.search {
+	position: static;
+}
+header.search .account {
+	justify-content: flex-end;
+}
+header.search .account.display-search {
+	width: 450px;
+}
+header.search .account .logout,
+header.search .account .favorite-link {
+	font-size: 25px;
+	border-radius: 50%;
+	min-width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: var(--light-brown);
+	background: white;
+	transition: 0.3s;
+}
+header.search .account .logout:hover,
+header.search .account .favorite-link:hover {
+	color: var(--brown);
+	background-color: var(--off-white);
+}
+
+header.search .account .logout {
+	padding: 0;
+}
+header.search .account .profile {
+	width: 40px;
+	height: 40px;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	border-radius: 50%;
+	display: inline-table;
+}
+header.search .account .profile img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+header .account .search {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 5px;
+	border-radius: 8px;
+	width: 140px;
+	transition: 0.3s;
+}
+header .account .search:has(#search-input:focus) {
+	width: 100%;
+}
+header .account .search .icon {
+	position: absolute;
+	left: 15px;
+	font-size: 20px;
+	color: var(--light-brown);
+}
+header .account .search #search-input {
+	color: black;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	padding-left: 40px;
+	z-index: 2;
+	width: 100%;
+}
+header.search {
+	background-color: var(--light-brown);
+	padding: 0 10px;
+}
+header.search .logo a h2 {
+	color: white;
+}
+header.search .logo a h2 span.special {
+	color: black;
+}
+header.search nav.nav ul li a {
+	color: white;
+	transition: 0.3s;
+}
+header.search nav.nav ul li a:hover {
+	color: var(--off-white);
+}
+header.search .logo h2 span.special {
+	color: white;
+}
+header .account .login,
+header .account .Sign-up {
+	min-width: fit-content;
+	transition: 0.3s;
+}
+header .account .login:hover {
+	background: var(--gray);
+	color: white;
+}
+header .account .Sign-up:hover {
+	background-color: var(--brown);
+}
+@media (max-width: 991px) {
+	header.search {
+		position: relative;
+	}
+	header .account .search {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	header .account .search:has(#search-input:focus) {
+		width: 350px;
+	}
+	header.search .account.display-search {
+		width: fit-content;
+	}
+	header.search:has(.account.display-search) {
+		padding: 20px 10px 60px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (max-width: 767px) {
+	header.search {
+		font-size: 14px;
+		min-height: 60px;
+		justify-content: center;
+		gap: 30px;
+	}
+	header .logo h2 {
+		display: none;
+	}
+	header nav.nav ul {
+		justify-content: center;
+	}
+	header.search nav.nav ul li a {
+		font-size: 14px;
+	}
+	header .account .login,
+	header .account .Sign-up {
+		padding: 5px 10px;
+	}
+	header.search .account {
+		width: fit-content;
+	}
+}
+
+/* End Header */

@@ -1,0 +1,134 @@
+:root {
+	--brown: #793e38;
+	--lighter-brown: #974e45;
+	--light-brown: #b55d51;
+	--cream: #fff0ed;
+	--dark-gray: #4c4c4c;
+	--gray: #878787;
+	--light-gray: #a5a5a5;
+	--off-white: #ebebeb;
+	--white: #ffffff;
+	--black: #000000;
+}
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+#root {
+	height: 100%;
+}
+.heading-1 {
+	font-weight: bold;
+	font-size: 56px;
+}
+.heading-2 {
+	font-weight: bolder;
+	font-size: 48px;
+}
+.heading-3 {
+	font-weight: bolder;
+	font-size: 40px;
+}
+.heading-4 {
+	font-weight: bolder;
+	font-size: 32px;
+}
+.heading-5 {
+	font-weight: bolder;
+	font-size: 24px;
+}
+.heading-6 {
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+.paragraph-1 {
+	font-size: 24px;
+}
+.paragraph-2 {
+	font-size: 18px;
+}
+.paragraph-3 {
+	font-size: 16px;
+}
+.paragraph-4 {
+	font-size: 14px;
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+.special {
+	color: var(--light-brown);
+}
+
+.button-shape {
+	text-transform: capitalize;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 7px 20px;
+	border-radius: 8px;
+	border: none;
+}
+.primary {
+	background-color: var(--light-brown);
+	color: white;
+}
+.secondary {
+	background-color: var(--off-white);
+	color: black;
+}
+
+.loader {
+	scale: 2;
+	transform: translate(-50%, -50%);
+	--s: 20px;
+	--_d: calc(0.353 * var(--s));
+	width: calc(var(--s) + var(--_d));
+	aspect-ratio: 1;
+	display: grid;
+}
+.loader:before,
+.loader:after {
+	content: "";
+	grid-area: 1 / 1;
+	clip-path: polygon(
+		var(--_d) 0,
+		100% 0,
+		100% calc(100% - var(--_d)),
+		calc(100% - var(--_d)) 100%,
+		0 100%,
+		0 var(--_d)
+	);
+	background: conic-gradient(
+		from -90deg at calc(100% - var(--_d)) var(--_d),
+		var(--brown) 135deg,
+		var(--light-brown) 0 270deg,
+		var(--lighter-brown) 0
+	);
+	animation: l6 2s infinite;
+}
+.loader:after {
+	animation-delay: -1s;
+}
+@keyframes l6 {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(30px, 0);
+	}
+	50% {
+		transform: translate(30px, 30px);
+	}
+	75% {
+		transform: translate(0, 30px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}

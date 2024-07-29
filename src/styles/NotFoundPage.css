@@ -1,0 +1,24 @@
+main.page-not-found {
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main.page-not-found .text {
+	text-align: center;
+}
+main.page-not-found .text h1 {
+	text-transform: capitalize;
+	font-size: 80px;
+	margin: 0;
+	color: #ff4546;
+}
+main.page-not-found .text p {
+	font-size: 20px;
+}
+main.page-not-found .text p .not-found-link {
+	color: var(--light-brown);
+	font-size: 20px;
+	font-weight: bold;
+}

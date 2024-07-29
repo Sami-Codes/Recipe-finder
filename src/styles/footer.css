@@ -1,0 +1,149 @@
+footer {
+	background-color: #f5f5f5;
+	padding: 20px 50px;
+}
+footer .top {
+	display: flex;
+	gap: 1%;
+	border-bottom: 2px solid var(--light-gray);
+	padding-bottom: 20px;
+}
+footer .top .column {
+	width: calc(100% / 3);
+}
+
+footer .top .logo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+footer .top .logo a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: black;
+	gap: 10px;
+}
+footer .top .logo a img {
+	width: 40px;
+}
+footer .top .logo a h2 {
+	text-decoration: none;
+}
+
+footer .top .logo a h2 span.special {
+	color: var(--light-brown);
+}
+
+footer .top .description {
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	color: var(--dark-gray);
+}
+footer .top h5 {
+	text-align: center;
+	margin: 30px;
+}
+footer .top ul.links {
+	list-style: none;
+	text-align: center;
+}
+footer .top ul li a {
+	padding: 5px 0px;
+	display: block;
+	color: var(--light-brown);
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.3s;
+}
+footer .top ul li a:hover {
+	color: var(--brown);
+}
+footer .top .account {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+footer .top .account .login {
+	transition: 0.3s;
+}
+footer .top .account .login:hover {
+	background: var(--gray);
+	color: white;
+}
+footer .top .account .Sign-up {
+	transition: 0.3s;
+}
+footer .top .account .Sign-up:hover {
+	background-color: var(--brown);
+}
+footer .top .account .logout {
+	min-width: 75px;
+	width: 85px;
+	padding: 10px 10px;
+	text-align: center;
+	transition: 0.3s;
+}
+
+footer .top .account .logout:hover {
+	background: var(--gray);
+	color: white;
+}
+footer .bottom {
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+footer .bottom .rights {
+	color: var(--gray);
+}
+footer .bottom .contact-me {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	align-items: center;
+}
+footer .bottom .contact-me .contact-link {
+	display: block;
+	font-size: 28px;
+	font-weight: bold;
+	color: var(--light-brown);
+	transition: 0.2s;
+}
+
+footer .bottom .contact-me .contact-link:hover {
+	color: var(--brown);
+}
+
+@media (max-width: 991px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (max-width: 767px) {
+	footer .top {
+		flex-wrap: wrap;
+	}
+	footer .top .column {
+		width: 100%;
+	}
+	footer .top .logo {
+		justify-content: center;
+	}
+	footer .top .description {
+		text-align: center;
+	}
+	footer .bottom {
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
+	footer .top ul.links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+	}
+}

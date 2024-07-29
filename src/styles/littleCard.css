@@ -1,0 +1,50 @@
+/* start little card */
+.little-card-link {
+	text-decoration: none;
+	color: black;
+}
+.little-card {
+	display: flex;
+	flex-direction: row;
+	height: 170px;
+	display: flex;
+	overflow: hidden;
+	border-radius: 8px;
+	border: 2px solid var(--off-white);
+	margin: 20px auto;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.little-card .image {
+	height: 100%;
+}
+.little-card .image img {
+	height: 100%;
+	object-fit: cover;
+}
+.little-card .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px 10px;
+}
+.little-card .info h4 {
+	margin: 0;
+}
+.little-card .info .tags {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+}
+.little-card .info .tags .tag {
+	padding: 5px;
+	font-weight: bold;
+	color: white;
+	background-color: var(--brown);
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+/* end little card */
